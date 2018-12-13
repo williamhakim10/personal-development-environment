@@ -1,0 +1,19 @@
+version: "3"
+volumes:
+  postgres-data:
+    driver: local
+
+  db:
+    # use this one which pre-installs the hstore extension.
+    image: aidanlister/postgres-hstore
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    networks:
+      - microservices
+    healthcheck:
+      test: "exit 0"

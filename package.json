@@ -1,0 +1,18 @@
+{
+  "name": "@williamhakim10/personal-development-environment",
+  "version": "1.0.0",
+  "description": "Personal development environment containing docker containers",
+  "main": "index.js",
+  "scripts": {
+    "db": "docker-compose up -d db",
+    "stop:all": "docker-compose stop",
+    "kill:all": "docker-compose down"
+  },
+  "repository": "https://github.com/williamhakim10/personal-development-environment.git",
+  "author": "William Hakim",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/williamhakim10/personal-development-environment/issues"
+  },
+  "homepage": "https://github.com/williamhakim10/personal-development-environment#readme",
+}
